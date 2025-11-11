@@ -6,36 +6,36 @@
 @use "sass:color";
 
 // Professional Sophisticated Color Palette
-$red-color: #C1666B !default;
-$red-color-dark: #8B4049 !default;
-$orange-color: #D4915E !default;
-$blue-color: #2C5F8D !default;
-$blue-color-dark: #1A3A52 !default;
-$cyan-color: #4A7C9A !default;
-$light-cyan-color: #7BA5BF;
-$green-color: #5D7F6F !default;
-$green-color-lime: #8BA888 !default;
-$green-color-dark: #3E5A4C !default;
-$green-color-light: #D4E7D4 !default;
-$green-color-bright: #6B9080 !default;
-$purple-color: #6B5B95 !default;
-$light-purple-color: #8B7BA8;
-$pink-color: #B87889 !default;
-$pink-color-light: #E5D4D7 !default;
-$yellow-color: #D9B56F !default;
+$red-color: #c1666b !default;
+$red-color-dark: #8b4049 !default;
+$orange-color: #d4915e !default;
+$blue-color: #2c5f8d !default;
+$blue-color-dark: #1a3a52 !default;
+$cyan-color: #4a7c9a !default;
+$light-cyan-color: #7ba5bf;
+$green-color: #5d7f6f !default;
+$green-color-lime: #8ba888 !default;
+$green-color-dark: #3e5a4c !default;
+$green-color-light: #d4e7d4 !default;
+$green-color-bright: #6b9080 !default;
+$purple-color: #6b5b95 !default;
+$light-purple-color: #8b7ba8;
+$pink-color: #b87889 !default;
+$pink-color-light: #e5d4d7 !default;
+$yellow-color: #d9b56f !default;
 
-$grey-color: #6E7C7C !default;
-$grey-color-light: #B3BFC1;
-$grey-color-dark: #1C2321;
-$grey-900: #2A2E2E;
+$grey-color: #6e7c7c !default;
+$grey-color-light: #b3bfc1;
+$grey-color-dark: #1c2321;
+$grey-900: #2a2e2e;
 
-$white-color: #FEFEFE !default;
-$black-color: #1A1D1E !default;
+$white-color: #fefefe !default;
+$black-color: #1a1d1e !default;
 
 // Theme colors
 
 $code-bg-color-light: rgba($cyan-color, 0.08);
-$code-bg-color-dark: #16213E !default;
+$code-bg-color-dark: #16213e !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

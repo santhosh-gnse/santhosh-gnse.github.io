@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 // Import Google Fonts for Premium Typography
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
 
 // Advanced Color Palette - Professional & Modern
 :root {
@@ -12,7 +12,7 @@
   --elite-primary-hover: #1d4ed8;
   --elite-accent: #0ea5e9;
   --elite-accent-hover: #0284c7;
-  
+
   // Sophisticated Neutrals
   --elite-dark: #1e293b;
   --elite-dark-light: #334155;
@@ -20,24 +20,24 @@
   --elite-light: #94a3b8;
   --elite-lighter: #cbd5e1;
   --elite-lightest: #f8fafc;
-  
+
   // Professional Surfaces
   --elite-surface: #ffffff;
   --elite-surface-hover: #f8fafc;
   --elite-border: #e2e8f0;
   --elite-border-light: #f1f5f9;
-  
+
   // Status Colors
   --elite-success: #10b981;
   --elite-warning: #f59e0b;
   --elite-error: #ef4444;
-  
+
   // Shadows & Effects
   --elite-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --elite-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --elite-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   --elite-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-  
+
   // Typography Scale
   --elite-text-xs: 0.75rem;
   --elite-text-sm: 0.875rem;
@@ -47,7 +47,7 @@
   --elite-text-2xl: 1.5rem;
   --elite-text-3xl: 1.875rem;
   --elite-text-4xl: 2.25rem;
-  
+
   // Spacing Scale
   --elite-space-1: 0.25rem;
   --elite-space-2: 0.5rem;
@@ -61,7 +61,13 @@
 
 // Premium Typography System
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-size: var(--elite-text-base);
   line-height: 1.6;
   color: var(--elite-dark);
@@ -73,8 +79,13 @@ body {
 }
 
 // Elite Heading System
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--elite-dark);
@@ -98,9 +109,9 @@ h2 {
   color: var(--elite-dark);
   position: relative;
   padding-bottom: var(--elite-space-2);
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -123,7 +134,8 @@ h4 {
   color: var(--elite-dark-light);
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: var(--elite-text-lg);
   font-weight: 600;
   color: var(--elite-medium);
@@ -136,7 +148,7 @@ a {
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  
+
   &:hover {
     color: var(--elite-primary-hover);
     text-decoration: none;
@@ -148,15 +160,17 @@ a {
   border-radius: 8px !important;
   border: 1px solid var(--global-divider-color) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
-  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease !important;
   overflow: hidden;
   background: var(--global-card-bg-color) !important;
-  
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
   }
-  
+
   .card-title {
     font-weight: 600;
     font-size: 1.25rem;
@@ -175,13 +189,13 @@ a {
   color: var(--global-hover-text-color) !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.25s ease;
-  
+
   &:hover {
     background: var(--global-hover-color) !important;
     border-color: var(--global-hover-color) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
-  
+
   &:active {
     transform: translateY(1px);
   }
@@ -195,18 +209,18 @@ a {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid var(--global-divider-color);
   padding: 0.5rem 0 !important;
-  
+
   .container {
     display: flex;
     align-items: center;
   }
-  
+
   .navbar-brand {
     font-weight: 600;
     font-size: 1.35rem;
     color: var(--global-theme-color);
   }
-  
+
   .nav-link {
     font-weight: 500;
     font-size: 0.95rem;
@@ -214,11 +228,11 @@ a {
     letter-spacing: 0.01em;
     position: relative;
     transition: color 0.25s ease;
-    
+
     &:hover {
       color: var(--global-hover-color);
     }
-    
+
     &.active {
       color: var(--global-theme-color);
       font-weight: 600;
@@ -236,7 +250,7 @@ footer.fixed-bottom {
   background: var(--global-footer-bg-color) !important;
   border-top: 1px solid var(--global-divider-color);
   padding: 20px 0;
-  
+
   .contact-note {
     font-size: 0.95rem;
     font-weight: 400;
@@ -248,8 +262,10 @@ footer.fixed-bottom {
   border-radius: 50%;
   border: 3px solid var(--global-divider-color);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -257,9 +273,10 @@ footer.fixed-bottom {
 }
 
 // Code Blocks - Professional Styling
-pre, code {
+pre,
+code {
   border-radius: 6px;
-  font-family: 'SF Mono', Monaco, 'Consolas', 'Courier New', monospace;
+  font-family: "SF Mono", Monaco, "Consolas", "Courier New", monospace;
 }
 
 pre {
@@ -287,7 +304,7 @@ code {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
@@ -298,8 +315,10 @@ code {
 .publications,
 .projects {
   .grid-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
     &:hover {
       z-index: 5;
     }
@@ -316,15 +335,15 @@ code {
     padding: 0.35rem; // More padding
     transition: all 0.2s ease;
     text-decoration: none;
-    
+
     &::before {
       display: none !important;
     }
-    
+
     &::after {
       display: none !important;
     }
-    
+
     &:hover {
       color: var(--global-theme-color) !important;
       transform: translateY(-1px);
@@ -340,7 +359,7 @@ textarea {
   border: 1px solid var(--global-divider-color) !important;
   padding: 10px 14px !important;
   transition: all 0.25s ease;
-  
+
   &:focus {
     border-color: var(--global-theme-color) !important;
     box-shadow: 0 0 0 3px rgba(44, 95, 141, 0.1) !important;
@@ -361,7 +380,7 @@ hr {
   table tr {
     border-bottom: 1px solid var(--global-divider-color);
     transition: background 0.25s ease;
-    
+
     &:hover {
       background: var(--global-code-bg-color);
     }
@@ -375,13 +394,13 @@ hr {
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
   transition: all 0.3s ease;
-  
+
   &:hover {
     border-color: var(--global-theme-color);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
   }
-  
+
   .repo-stats {
     span {
       background: var(--global-theme-color);
@@ -440,20 +459,20 @@ p {
     margin-bottom: 10px;
     font-family: monospace !important;
     font-size: 0.875rem;
-    
+
     p {
       display: inline-block;
       margin: 0;
       line-height: 1.4;
     }
   }
-  
+
   img {
     border-radius: 8px;
     border: 3px solid var(--elite-border);
     box-shadow: var(--elite-shadow-lg);
     transition: all 0.3s ease;
-    
+
     &:hover {
       transform: translateY(-2px);
       box-shadow: var(--elite-shadow-xl);
@@ -466,7 +485,7 @@ p {
   .post-content {
     margin-top: 0 !important;
     padding-top: 0 !important;
-    
+
     > .row:first-child {
       margin-top: 0 !important;
     }
@@ -485,15 +504,15 @@ footer {
     border-top: 1px solid var(--global-divider-color) !important;
     padding: 12px 0 !important;
     font-size: 0.85rem !important;
-    
+
     .container {
       text-align: center;
       color: var(--global-text-color-light);
-      
+
       a {
         color: var(--global-theme-color);
         text-decoration: none;
-        
+
         &:hover {
           text-decoration: underline;
         }
@@ -514,7 +533,7 @@ nav.navbar,
   min-height: 50px !important;
   max-height: 50px !important;
   height: 70px !important;
-  
+
   > .container,
   .container {
     min-height: 50px !important;
@@ -526,7 +545,7 @@ nav.navbar,
     padding-bottom: 0 !important;
     line-height: 1 !important;
   }
-  
+
   .navbar-collapse,
   .collapse {
     display: flex !important;
@@ -535,7 +554,7 @@ nav.navbar,
     margin: 0 !important;
     height: 50px !important;
   }
-  
+
   .navbar-nav {
     display: flex !important;
     align-items: center !important;
@@ -549,7 +568,7 @@ nav.navbar,
       display: flex !important;
       align-items: center !important;
       margin: 0 !important;
-      
+
       .nav-link {
         font-weight: 600 !important;
         font-size: 0.9rem !important;
@@ -565,13 +584,13 @@ nav.navbar,
         align-items: center !important;
         line-height: 1.2 !important;
         height: 36px !important;
-        
+
         &:hover {
           background: rgba(37, 99, 235, 0.08) !important;
           color: var(--elite-primary) !important;
           transform: translateY(-1px) !important;
         }
-        
+
         &.active {
           background: rgba(37, 99, 235, 0.1) !important;
           color: var(--elite-primary) !important;
@@ -580,7 +599,7 @@ nav.navbar,
           box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1) !important;
         }
       }
-      
+
       // Elegant Search Button (Ctrl+K) - Better spacing
       #search-toggle {
         background: none !important;
@@ -598,7 +617,7 @@ nav.navbar,
         justify-content: center !important;
         white-space: nowrap !important;
         line-height: 1 !important;
-        
+
         .nav-link {
           padding: 0 !important;
           margin: 0 !important;
@@ -609,13 +628,13 @@ nav.navbar,
           align-items: center !important;
           gap: 4px !important;
           line-height: 1 !important;
-          
+
           i {
             font-size: 0.95rem;
             margin: 0;
           }
         }
-        
+
         &:hover {
           background: rgba(37, 99, 235, 0.05) !important;
           border-color: rgba(37, 99, 235, 0.25) !important;
@@ -623,7 +642,7 @@ nav.navbar,
         }
       }
     }
-    
+
     // Elegant Theme Toggle Container - Single clean icon
     .toggle-container {
       margin-left: 0 !important;
@@ -631,7 +650,7 @@ nav.navbar,
       margin-bottom: 0 !important;
       display: flex !important;
       align-items: center !important;
-      
+
       button {
         background: none !important;
         border: 1px solid rgba(37, 99, 235, 0.15) !important;
@@ -646,11 +665,11 @@ nav.navbar,
         align-items: center !important;
         justify-content: center !important;
         line-height: 1 !important;
-        
+
         i {
           font-size: 1.1rem !important;
         }
-        
+
         &:hover {
           background: rgba(37, 99, 235, 0.05) !important;
           border-color: rgba(37, 99, 235, 0.25) !important;
@@ -675,7 +694,8 @@ nav.navbar,
 }
 
 // ENHANCED BUTTON SYSTEM OVERRIDE - Softer Contrast
-.btn, button {
+.btn,
+button {
   font-weight: 600 !important;
   font-size: 0.85rem !important;
   padding: 10px 20px !important;
@@ -685,14 +705,14 @@ nav.navbar,
   border: 1px solid !important;
   transition: all 0.2s ease !important;
   position: relative !important;
-  
+
   // Softer, less aggressive styling
   &:not(.btn-outline) {
     background: rgba(37, 99, 235, 0.1) !important;
     border-color: rgba(37, 99, 235, 0.2) !important;
     color: #2563eb !important;
     box-shadow: none !important;
-    
+
     &:hover {
       background: rgba(37, 99, 235, 0.15) !important;
       border-color: rgba(37, 99, 235, 0.3) !important;
@@ -700,13 +720,13 @@ nav.navbar,
       box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15) !important;
     }
   }
-  
+
   // Special styling for primary actions (if needed)
   &.btn-primary {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(14, 165, 233, 0.9)) !important;
     border-color: transparent !important;
     color: white !important;
-    
+
     &:hover {
       background: linear-gradient(135deg, #2563eb, #0ea5e9) !important;
       transform: translateY(-2px) !important;
@@ -716,19 +736,25 @@ nav.navbar,
 }
 
 // ENHANCED HEADING SYSTEM OVERRIDE
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
-  
-  &.page-heading, &.post-title {
+
+  &.page-heading,
+  &.post-title {
     background: linear-gradient(135deg, var(--elite-primary) 0%, var(--elite-accent) 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     background-clip: text !important;
     position: relative;
-    
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -8px;
       left: 0;
@@ -749,9 +775,9 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.9) !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow: hidden !important;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -759,7 +785,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 4px;
     background: linear-gradient(90deg, var(--elite-primary), var(--elite-accent));
   }
-  
+
   &:hover {
     transform: translateY(-8px) scale(1.02) !important;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
@@ -773,13 +799,19 @@ html[data-theme="dark"] {
     color: var(--global-text-color) !important;
     background: var(--global-bg-color) !important;
   }
-  
+
   // Fix heading colors in dark mode
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--global-text-color) !important;
-    
+
     // Remove gradient text effects in dark mode
-    &.page-heading, &.post-title {
+    &.page-heading,
+    &.post-title {
       background: none !important;
       -webkit-background-clip: unset !important;
       -webkit-text-fill-color: unset !important;
@@ -787,36 +819,36 @@ html[data-theme="dark"] {
       color: var(--global-theme-color) !important;
     }
   }
-  
+
   // Fix link colors
   a {
     color: var(--global-theme-color) !important;
-    
+
     &:hover {
       color: var(--global-hover-color) !important;
     }
   }
-  
+
   // Fix navigation in dark mode
   .navbar {
     background: rgba(31, 41, 55, 0.95) !important;
-    
+
     .navbar-brand {
       color: var(--global-text-color) !important;
-      
+
       &:hover {
         color: var(--global-theme-color) !important;
       }
     }
-    
+
     .navbar-nav .nav-item .nav-link {
       color: var(--global-text-color-light) !important;
-      
+
       &:hover {
         color: var(--global-theme-color) !important;
         background: rgba(14, 165, 233, 0.1) !important;
       }
-      
+
       &.active {
         color: var(--global-theme-color) !important;
         background: rgba(14, 165, 233, 0.15) !important;
@@ -824,98 +856,99 @@ html[data-theme="dark"] {
       }
     }
   }
-  
+
   // Fix buttons in dark mode - much softer contrast
-  .btn, button {
+  .btn,
+  button {
     &:not(.btn-outline) {
       background: rgba(14, 165, 233, 0.15) !important;
       border-color: rgba(14, 165, 233, 0.25) !important;
       color: #0ea5e9 !important;
-      
+
       &:hover {
         background: rgba(14, 165, 233, 0.2) !important;
         border-color: rgba(14, 165, 233, 0.35) !important;
         box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2) !important;
       }
     }
-    
+
     &.btn-primary {
       background: rgba(14, 165, 233, 0.8) !important;
       color: white !important;
-      
+
       &:hover {
         background: rgba(14, 165, 233, 0.9) !important;
       }
     }
   }
-  
+
   // Fix card backgrounds
   .card {
     background: var(--global-card-bg-color) !important;
     border-color: var(--global-divider-color) !important;
-    
+
     .card-title {
       color: var(--global-text-color) !important;
     }
-    
+
     .card-text {
       color: var(--global-text-color-light) !important;
     }
   }
-  
+
   // Fix paragraph and general text
   p {
     color: var(--global-text-color) !important;
   }
-  
+
   // Fix list items
   li {
     color: var(--global-text-color) !important;
   }
-  
+
   // Fix social icons in dark mode - with larger size
   .social a {
     color: var(--global-text-color-light) !important;
     font-size: 1.6rem !important; // Maintain enlarged size in dark mode
-    
+
     &:hover {
       color: var(--global-theme-color) !important;
     }
   }
-  
+
   // Fix navbar buttons in dark mode
   .navbar {
     #search-toggle {
       border-color: rgba(255, 255, 255, 0.15) !important;
       color: var(--global-text-color-light) !important;
-      
+
       &:hover {
         background: rgba(255, 255, 255, 0.05) !important;
         border-color: rgba(255, 255, 255, 0.25) !important;
       }
     }
-    
+
     .toggle-container button {
       border-color: rgba(255, 255, 255, 0.15) !important;
       color: var(--global-text-color-light) !important;
-      
+
       i {
         color: var(--global-text-color-light) !important;
       }
-      
+
       &:hover {
         background: rgba(255, 255, 255, 0.05) !important;
         border-color: rgba(255, 255, 255, 0.25) !important;
       }
     }
   }
-  
+
   // Fix footer in dark mode
   footer.fixed-bottom {
     background: var(--global-bg-color) !important;
     border-top-color: var(--global-divider-color) !important;
   }
-  
+
   // Override elite variables for dark mode compatibility
   --elite-dark: var(--global-text-color);
   --elite-dark-light: var(--global-text-color-light);
@@ -935,7 +968,7 @@ nav#navbar.navbar {
   min-height: 50px !important;
   max-height: 50px !important;
   height: 50px !important;
-  
+
   > .container {
     height: 50px !important;
     min-height: 50px !important;

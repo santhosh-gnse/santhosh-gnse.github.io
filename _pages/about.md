@@ -33,4 +33,3 @@ At RBCDSAI, I am working on evaluation and explanations for RL trained policies 
 
 I am currently pursuing the final year of my B.S. in Data Science and Applications from [IIT Madras](https://study.iitm.ac.in/ds/), Chennai, as an off-campus degree. I have also completed my B.E. in Electrical and Electronics Engineering from [Sri Sivasubramaniya Nadar College of Engineering (SSNCE)](https://www.ssn.edu.in/)
 , Chennai, India.
-
