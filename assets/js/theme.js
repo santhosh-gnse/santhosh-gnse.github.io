@@ -1,14 +1,12 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Toggle between light and dark theme settings only (no system theme).
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
+  if (themeSetting == "light" || themeSetting == "system") {
     setThemeSetting("dark");
   } else {
-    setThemeSetting("system");
+    setThemeSetting("light");
   }
 };
 
@@ -24,6 +22,7 @@ let setThemeSetting = (themeSetting) => {
 // Apply the computed dark or light theme to the website.
 let applyTheme = () => {
   let theme = determineComputedTheme();
+  let themeSetting = determineThemeSetting();
 
   transTheme();
   setHighlight(theme);
@@ -57,6 +56,9 @@ let applyTheme = () => {
 
   document.documentElement.setAttribute("data-theme", theme);
 
+  // Update theme toggle icon to reflect current state (light/dark/system)
+  updateThemeToggleIcon(themeSetting, theme);
+
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
   for (let i = 0; i < tables.length; i++) {
@@ -85,6 +87,24 @@ let applyTheme = () => {
     medium_zoom.update({
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
     });
+  }
+};
+
+// Update the theme toggle icon based on the current setting and computed theme
+let updateThemeToggleIcon = (themeSetting, computedTheme) => {
+  const icon = document.getElementById("light-toggle-icon");
+  if (!icon) return;
+
+  // Reset classes
+  icon.classList.remove("fa-sun", "fa-moon", "fa-circle-half-stroke");
+
+  // Only show sun (light mode) or moon (dark mode)
+  if (computedTheme === "dark") {
+    icon.classList.add("fa-moon");
+    icon.setAttribute("title", "Dark mode - Click for light mode");
+  } else {
+    icon.classList.add("fa-sun");
+    icon.setAttribute("title", "Light mode - Click for dark mode");
   }
 };
 

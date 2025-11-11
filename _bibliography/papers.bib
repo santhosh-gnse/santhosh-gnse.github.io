@@ -3,113 +3,85 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
+@inproceedings{santhosh2025indicasa,
+  preview={IndiCASA.png},
+  abbr={AIES},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+  title={IndiCASA: A Dataset and Bias Evaluation Framework in LLMs Using Contrastive Embedding Similarity in the Indian Context},
+  author={G S, Santhosh and Govind, Akshay S and Krishnan, Gokul S and Ravindran, Balaraman and Natarajan, Sriraam},
+  booktitle={AAAI/ACM Conference on AI, Ethics, and Society (AIES)},
+  year={2025},
+  organization={AAAI/ACM},
+  abstract={Large Language Models (LLMs) have gained significant traction across critical domains owing to their impressive contextual understanding and generative capabilities. However, their increasing deployment in high stakes applications necessitates rigorous evaluation of embedded biases, particularly in culturally diverse contexts like India where existing embedding-based bias assessment methods often fall short in capturing nuanced stereotypes. We propose an evaluation framework based on an encoder trained using contrastive learning that captures fine-grained bias through embedding similarity. We also introduce a novel dataset - IndiCASA (IndiBias-based Contextually Aligned Stereotypes and Anti-stereotypes) comprising 2,575 human-validated sentences spanning five demographic axes: caste, gender, religion, disability, and socioeconomic status.},
+  html={https://santhosh-gnse.github.io/IndiCASA-webpage/},
+  pdf={https://arxiv.org/abs/2510.02742},
+  code={https://github.com/cerai-iitm/IndiCASA},
+  poster={https://drive.google.com/file/d/1KU1TsW109gdSqIcysSvR524JKSSQl8in/view?usp=sharing},
+  proceedings={https://ojs.aaai.org/index.php/AIES/article/view/36605},
+  selected={true}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@article{santhosh2025aqua,
+  preview={AQUA.png},
+  abbr={arXiv},
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+  title={AQUA: Attention via QUery mAgnitudes for Memory and Compute Efficient Inference in LLMs},
+  author={G S, Santhosh and Prakash, Saurav and Ravindran, Balaraman},
+  journal={arXiv preprint arXiv:2509.11155},
+  year={2025},
+  note={Under review at KDD 2026},
+  abstract={The quadratic complexity of the attention mechanism remains a fundamental barrier to scaling Large Language Models (LLMs) to longer contexts, creating a critical bottleneck in both computation and memory. To address this, we introduce AQUA (Attention via QUery mAgnitudes) a novel and versatile approximation strategy that significantly reduces the cost of attention with a graceful performance trade-off. Our method operates in two phases: an efficient offline step where we compute a universal, language agnostic projection matrix via SVD on a calibration dataset, and an online inference step where we project query and key vectors and dynamically select a sparse subset of dimensions based on the query's magnitude. We demonstrate that a 25% reduction in the attention dot-product computation can be achieved with statistically insignificant impact on performance across a wide range of benchmarks.},
+  pdf={https://arxiv.org/abs/2509.11155},
+  selected={true}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
+@article{santhosh2025swan,
+  preview={SWAN.png},
+  abbr={arXiv},
   bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+  title={SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression},
+  author={G S, Santhosh and Prakash, Saurav and Ravindran, Balaraman},
+  journal={OpenReview},
+  year={2025},
+  note={Under review at ICLR 2026},
+  abstract={Large Language Models (LLMs) face a significant bottleneck during autoregressive inference due to the massive memory footprint of the Key-Value (KV) cache. Existing compression techniques like token eviction, quantization, or other low-rank methods often risk information loss, have fixed limits, or introduce significant computational overhead from explicit decompression steps. In this work, we introduce SWAN, a novel, fine-tuning-free framework that eliminates this overhead. Our method uses an offline orthogonal matrix to rotate and prune the KV-cache, which is then used directly in the attention computation without any reconstruction. Our extensive experiments demonstrate that SWAN, augmented with a small dense buffer, offers a robust trade-off, maintaining performance close to the uncompressed baseline even at aggressive 50-60% memory savings per-token on KV-cache.},
+  html={https://openreview.net/forum?id=eWuRZ51gpr},
+  pdf={https://openreview.net/pdf?id=eWuRZ51gpr},
+  selected={true}
 }
 
-@book{przibram1967letters,
+@inproceedings{santhosh2024quantum,
+  abbr={COMSNETS},
   bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+  title={A Quantum Approach to Solve N-Queens Problem},
+  author={G S, Santhosh and Joshi, P and Barui, A and Panigrahi, PK},
+  booktitle={2024 16th International Conference on COMmunication Systems \& NETworkS (COMSNETS)},
+  year={2024},
+  organization={IEEE}
 }
+
+@inproceedings{raju2024energy,
+  abbr={ICEES},
+  bibtex_show={true},
+  title={Energy Conservation in Educational Buildings using IOT},
+  author={Raju, L and M, Prathyumnan and G S, Santhosh and K S, Sasikaran and others},
+  booktitle={2024 10th International Conference on Electrical Energy Systems (ICEES)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
+}
+
+@inproceedings{raju2023automation,
+  abbr={ICEES},
+  bibtex_show={true},
+  title={Advanced Automation and Energy Management using IOT},
+  author={Raju, L and G S, Santhosh and K S, Sasikaran},
+  booktitle={2023 9th International Conference on Electrical Energy Systems (ICEES)},
+  pages={52--57},
+  year={2023},
+  organization={IEEE}
+}
+
+
+
+

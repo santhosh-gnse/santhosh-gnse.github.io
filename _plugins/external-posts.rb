@@ -23,10 +23,19 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
-      process_entries(site, src, feed.entries)
+      begin
+        resp = HTTParty.get(src['rss_url'])
+        xml = resp.body
+        if xml.nil? || xml.empty?
+          Jekyll.logger.warn "ExternalPosts:", "no RSS content from #{src['rss_url']}"
+          return
+        end
+        feed = Feedjira.parse(xml)
+        process_entries(site, src, feed.entries)
+      rescue StandardError => e
+        Jekyll.logger.warn "ExternalPosts:", "skipping RSS fetch from #{src['rss_url']} — #{e.class}: #{e.message}"
+        return
+      end
     end
 
     def process_entries(site, src, entries)
@@ -69,16 +78,26 @@ module ExternalPosts
     def fetch_from_urls(site, src)
       src['posts'].each do |post|
         puts "...fetching #{post['url']}"
-        content = fetch_content_from_url(post['url'])
-        content[:published] = parse_published_date(post['published_date'])
-        create_document(site, src['name'], post['url'], content)
+        begin
+          content = fetch_content_from_url(post['url'])
+          content[:published] = parse_published_date(post['published_date'])
+          create_document(site, src['name'], post['url'], content)
+        rescue StandardError => e
+          Jekyll.logger.warn "ExternalPosts:", "skipping fetch for #{post['url']} — #{e.class}: #{e.message}"
+          next
+        end
       end
     end
 
     def parse_published_date(published_date)
       case published_date
       when String
-        Time.parse(published_date).utc
+        begin
+          Time.parse(published_date).utc
+        rescue StandardError => e
+          Jekyll.logger.warn "ExternalPosts:", "invalid published_date #{published_date} — #{e.class}: #{e.message}"
+          Time.now.utc
+        end
       when Date
         published_date.to_time.utc
       else
@@ -87,23 +106,28 @@ module ExternalPosts
     end
 
     def fetch_content_from_url(url)
-      html = HTTParty.get(url).body
-      parsed_html = Nokogiri::HTML(html)
+      begin
+        html = HTTParty.get(url).body
+        parsed_html = Nokogiri::HTML(html)
 
-      title = parsed_html.at('head title')&.text.strip || ''
-      description = parsed_html.at('head meta[name="description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[name="og:description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[property="og:description"]')&.attr('content')
+        title = parsed_html.at('head title')&.text&.strip || ''
+        description = parsed_html.at('head meta[name="description"]')&.attr('content')
+        description ||= parsed_html.at('head meta[name="og:description"]')&.attr('content')
+        description ||= parsed_html.at('head meta[property="og:description"]')&.attr('content')
 
-      body_content = parsed_html.search('p').map { |e| e.text }
-      body_content = body_content.join() || ''
+        body_content = parsed_html.search('p').map { |e| e.text }
+        body_content = body_content.join() || ''
 
-      {
-        title: title,
-        content: body_content,
-        summary: description
-        # Note: The published date is now added in the fetch_from_urls method.
-      }
+        {
+          title: title,
+          content: body_content,
+          summary: description
+          # Note: The published date is now added in the fetch_from_urls method.
+        }
+      rescue StandardError => e
+        Jekyll.logger.warn "ExternalPosts:", "failed to fetch/parse #{url} — #{e.class}: #{e.message}"
+        return { title: '', content: '', summary: '' }
+      end
     end
 
   end

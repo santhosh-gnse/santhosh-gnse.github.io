@@ -5,37 +5,37 @@
 
 @use "sass:color";
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
-$light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+// Professional Sophisticated Color Palette
+$red-color: #C1666B !default;
+$red-color-dark: #8B4049 !default;
+$orange-color: #D4915E !default;
+$blue-color: #2C5F8D !default;
+$blue-color-dark: #1A3A52 !default;
+$cyan-color: #4A7C9A !default;
+$light-cyan-color: #7BA5BF;
+$green-color: #5D7F6F !default;
+$green-color-lime: #8BA888 !default;
+$green-color-dark: #3E5A4C !default;
+$green-color-light: #D4E7D4 !default;
+$green-color-bright: #6B9080 !default;
+$purple-color: #6B5B95 !default;
+$light-purple-color: #8B7BA8;
+$pink-color: #B87889 !default;
+$pink-color-light: #E5D4D7 !default;
+$yellow-color: #D9B56F !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+$grey-color: #6E7C7C !default;
+$grey-color-light: #B3BFC1;
+$grey-color-dark: #1C2321;
+$grey-900: #2A2E2E;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: #FEFEFE !default;
+$black-color: #1A1D1E !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: rgba($cyan-color, 0.08);
+$code-bg-color-dark: #16213E !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";
@@ -45,8 +45,8 @@ $ti-font-path: "../fonts";
 
 // Back To Top button config
 $back-to-top-z-index: 10;
-$back-to-top-bottom: 30px;
-$back-to-top-right: 30px;
-$back-to-top-diameter: 40px;
+$back-to-top-bottom: 35px;
+$back-to-top-right: 35px;
+$back-to-top-diameter: 55px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;

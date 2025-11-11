@@ -2,28 +2,27 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Santhosh G S
+    - name: Location
+      value: Chennai, Tamil Nadu, India
+    # - name: Languages
+    #   value: English, Tamil
+    # - name: Research Interests
+    #   value: Reinforcement Learning, Natural Language Processing, Deep Learning
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.S. in Data Science and Applications
+      institution: Indian Institute of Technology Madras, India
+      year: 2021 - 2025 (Expected)
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Final year student in the innovative off-campus degree program
+        - Specialization in Machine Learning and Statistical Analysis
+        - Relevant coursework: Advanced Algorithms, Statistical Methods, Database Management
+    - title: B.E. in Electrical and Electronics Engineering
+      institution: Sri Sivasubramaniya Nadar College of Engineering, Chennai, India
+      year: 2020 - 2024
       description:
         - Description 1.
         - Description 2.
@@ -31,9 +30,9 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Post-Baccalaureate Fellow
+      institution: Robert Bosch Centre for Data Science and AI, IIT Madras
+      year: 2024 - Present
       description:
         - Description 1.
         - Description 2.

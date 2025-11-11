@@ -11,13 +11,13 @@ group :jekyll_plugins do
     gem 'jekyll-imagemagick'
     gem 'jekyll-jupyter-notebook'
     gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
+    # gem 'jekyll-minifier'  # Disabled due to conflict with Jupyter notebook plugin
     gem 'jekyll-paginate-v2'
     gem 'jekyll-regex-replace'
     gem 'jekyll-scholar'
     gem 'jekyll-sitemap'
     gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
+    # gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"  # Disabled due to conflict with Jupyter notebook plugin
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'

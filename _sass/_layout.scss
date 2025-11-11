@@ -13,13 +13,23 @@ body {
   h4,
   h5,
   h6 {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 50px; // Adjusted for smaller navbar
   }
 }
 
 body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
+  // Reduced padding for compact navbar
+  padding-top: 45px;
+}
+
+// Main content spacing after navbar - reduced
+main.page-content {
+  padding-top: 0.5rem;
+}
+
+// About page specific spacing - reduced
+.about {
+  margin-top: 0.5rem;
 }
 
 body.sticky-bottom-footer {
@@ -29,6 +39,7 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+  padding-top: 1rem;
 }
 
 // Profile

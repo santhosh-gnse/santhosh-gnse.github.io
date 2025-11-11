@@ -1,0 +1,944 @@
+/*******************************************************************************
+ * Elite Professional Design System - Premium & Sophisticated
+ ******************************************************************************/
+
+// Import Google Fonts for Premium Typography
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+// Advanced Color Palette - Professional & Modern
+:root {
+  // Primary Brand Colors
+  --elite-primary: #2563eb;
+  --elite-primary-hover: #1d4ed8;
+  --elite-accent: #0ea5e9;
+  --elite-accent-hover: #0284c7;
+  
+  // Sophisticated Neutrals
+  --elite-dark: #1e293b;
+  --elite-dark-light: #334155;
+  --elite-medium: #64748b;
+  --elite-light: #94a3b8;
+  --elite-lighter: #cbd5e1;
+  --elite-lightest: #f8fafc;
+  
+  // Professional Surfaces
+  --elite-surface: #ffffff;
+  --elite-surface-hover: #f8fafc;
+  --elite-border: #e2e8f0;
+  --elite-border-light: #f1f5f9;
+  
+  // Status Colors
+  --elite-success: #10b981;
+  --elite-warning: #f59e0b;
+  --elite-error: #ef4444;
+  
+  // Shadows & Effects
+  --elite-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --elite-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --elite-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --elite-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  
+  // Typography Scale
+  --elite-text-xs: 0.75rem;
+  --elite-text-sm: 0.875rem;
+  --elite-text-base: 1rem;
+  --elite-text-lg: 1.125rem;
+  --elite-text-xl: 1.25rem;
+  --elite-text-2xl: 1.5rem;
+  --elite-text-3xl: 1.875rem;
+  --elite-text-4xl: 2.25rem;
+  
+  // Spacing Scale
+  --elite-space-1: 0.25rem;
+  --elite-space-2: 0.5rem;
+  --elite-space-3: 0.75rem;
+  --elite-space-4: 1rem;
+  --elite-space-6: 1.5rem;
+  --elite-space-8: 2rem;
+  --elite-space-12: 3rem;
+  --elite-space-16: 4rem;
+}
+
+// Premium Typography System
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--elite-text-base);
+  line-height: 1.6;
+  color: var(--elite-dark);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  background: var(--elite-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Elite Heading System
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--elite-dark);
+  margin-top: var(--elite-space-8);
+  margin-bottom: var(--elite-space-4);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--elite-text-4xl);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--elite-primary) 0%, var(--elite-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: var(--elite-text-3xl);
+  font-weight: 700;
+  color: var(--elite-dark);
+  position: relative;
+  padding-bottom: var(--elite-space-2);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 3px;
+    background: linear-gradient(90deg, var(--elite-primary), var(--elite-accent));
+    border-radius: 2px;
+  }
+}
+
+h3 {
+  font-size: var(--elite-text-2xl);
+  font-weight: 600;
+  color: var(--elite-dark-light);
+}
+
+h4 {
+  font-size: var(--elite-text-xl);
+  font-weight: 600;
+  color: var(--elite-dark-light);
+}
+
+h5, h6 {
+  font-size: var(--elite-text-lg);
+  font-weight: 600;
+  color: var(--elite-medium);
+}
+
+// Premium Link System
+a {
+  color: var(--elite-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  
+  &:hover {
+    color: var(--elite-primary-hover);
+    text-decoration: none;
+  }
+}
+
+// Cards - Clean Professional Design
+.card {
+  border-radius: 8px !important;
+  border: 1px solid var(--global-divider-color) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  overflow: hidden;
+  background: var(--global-card-bg-color) !important;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  .card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--global-theme-color);
+  }
+}
+
+// Buttons - Professional Solid Style
+.btn {
+  border-radius: 6px !important;
+  padding: 10px 24px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--global-theme-color) !important;
+  background: var(--global-theme-color) !important;
+  color: var(--global-hover-text-color) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  
+  &:hover {
+    background: var(--global-hover-color) !important;
+    border-color: var(--global-hover-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// Header/Navigation - Compact Professional
+.navbar {
+  background: rgba(254, 254, 254, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding: 0.5rem 0 !important;
+  
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--global-theme-color);
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0 12px;
+    letter-spacing: 0.01em;
+    position: relative;
+    transition: color 0.25s ease;
+    
+    &:hover {
+      color: var(--global-hover-color);
+    }
+    
+    &.active {
+      color: var(--global-theme-color);
+      font-weight: 600;
+    }
+  }
+}
+
+html[data-theme="dark"] .navbar {
+  background: rgba(28, 35, 33, 0.95) !important;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+// Footer - Professional & Clean
+footer.fixed-bottom {
+  background: var(--global-footer-bg-color) !important;
+  border-top: 1px solid var(--global-divider-color);
+  padding: 20px 0;
+  
+  .contact-note {
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+}
+
+// Profile Image - Elegant Presentation
+.profile img {
+  border-radius: 50%;
+  border: 3px solid var(--global-divider-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Code Blocks - Professional Styling
+pre, code {
+  border-radius: 6px;
+  font-family: 'SF Mono', Monaco, 'Consolas', 'Courier New', monospace;
+}
+
+pre {
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--global-theme-color);
+}
+
+code {
+  padding: 3px 6px;
+  background: var(--global-code-bg-color);
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-weight: 400;
+  border: 1px solid var(--global-divider-color);
+}
+
+// Back to Top Button - Professional Design
+#back-to-top {
+  border-radius: 50% !important;
+  font-size: 1.25rem !important;
+  font-weight: normal;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+// Publications/Projects - Professional Grid
+.publications,
+.projects {
+  .grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      z-index: 5;
+    }
+  }
+}
+
+// Social Icons - Clean & Simple (No Circles) - Enlarged
+.social {
+  a {
+    display: inline-block;
+    color: var(--global-text-color-light) !important;
+    font-size: 1.5rem; // Enlarged from 1.2rem
+    margin: 0 0.9rem; // Slightly more spacing
+    padding: 0.35rem; // More padding
+    transition: all 0.2s ease;
+    text-decoration: none;
+    
+    &::before {
+      display: none !important;
+    }
+    
+    &::after {
+      display: none !important;
+    }
+    
+    &:hover {
+      color: var(--global-theme-color) !important;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Input and Form Elements - Professional
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 6px !important;
+  border: 1px solid var(--global-divider-color) !important;
+  padding: 10px 14px !important;
+  transition: all 0.25s ease;
+  
+  &:focus {
+    border-color: var(--global-theme-color) !important;
+    box-shadow: 0 0 0 3px rgba(44, 95, 141, 0.1) !important;
+    outline: none !important;
+  }
+}
+
+// Dividers - Simple & Professional
+hr {
+  height: 1px;
+  background: var(--global-divider-color);
+  border: none;
+  margin: 2.5rem 0;
+}
+
+// News/Announcements - Clean Professional Style
+.news {
+  table tr {
+    border-bottom: 1px solid var(--global-divider-color);
+    transition: background 0.25s ease;
+    
+    &:hover {
+      background: var(--global-code-bg-color);
+    }
+  }
+}
+
+// Repository Stats - Professional Design
+.repo {
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  .repo-stats {
+    span {
+      background: var(--global-theme-color);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      margin: 0 3px;
+    }
+  }
+}
+
+// Additional Professional Enhancements
+p {
+  margin-bottom: 1.2em;
+}
+
+// Smooth transitions for theme switching
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+// Professional spacing - reduced top padding
+.container {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+// Professional profile image positioning - Spans both title and subtitle
+@media (min-width: 576px) {
+  .profile {
+    width: 30% !important;
+    max-width: 220px !important;
+    margin-top: -20px !important; // Push up to align with title top
+    margin-right: 20px !important;
+    margin-bottom: 15px !important;
+    align-self: flex-start !important;
+    float: right !important;
+  }
+}
+
+// Ensure the about page content starts at the same vertical position
+.about .container {
+  .row {
+    align-items: flex-start !important;
+  }
+}
+
+// Profile with proper wrapping and original monospace font for more-info
+.profile {
+  .more-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: monospace !important;
+    font-size: 0.875rem;
+    
+    p {
+      display: inline-block;
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+  
+  img {
+    border-radius: 8px;
+    border: 3px solid var(--elite-border);
+    box-shadow: var(--elite-shadow-lg);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--elite-shadow-xl);
+    }
+  }
+}
+
+// About page - start content from top
+.about {
+  .post-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    
+    > .row:first-child {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+// Footer Improvements - Static at bottom with proper styling
+footer {
+  &.fixed-bottom {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: var(--global-bg-color) !important;
+    border-top: 1px solid var(--global-divider-color) !important;
+    padding: 12px 0 !important;
+    font-size: 0.85rem !important;
+    
+    .container {
+      text-align: center;
+      color: var(--global-text-color-light);
+      
+      a {
+        color: var(--global-theme-color);
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Ensure main content has enough bottom padding for fixed footer
+body.footer-fixed {
+  padding-bottom: 60px !important;
+}
+
+// ENHANCED PROFESSIONAL NAVIGATION OVERRIDE - Compact & Professional v2
+nav.navbar,
+.navbar {
+  padding: 0.4rem 0 !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  height: 70px !important;
+  
+  > .container,
+  .container {
+    min-height: 50px !important;
+    max-height: 50px !important;
+    height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1 !important;
+  }
+  
+  .navbar-collapse,
+  .collapse {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 50px !important;
+  }
+  
+  .navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    .nav-item {
+      display: flex !important;
+      align-items: center !important;
+      margin: 0 !important;
+      
+      .nav-link {
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        margin: 0 2px !important;
+        transition: all 0.2s ease !important;
+        position: relative;
+        color: var(--elite-dark-light) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        line-height: 1.2 !important;
+        height: 36px !important;
+        
+        &:hover {
+          background: rgba(37, 99, 235, 0.08) !important;
+          color: var(--elite-primary) !important;
+          transform: translateY(-1px) !important;
+        }
+        
+        &.active {
+          background: rgba(37, 99, 235, 0.1) !important;
+          color: var(--elite-primary) !important;
+          font-weight: 700 !important;
+          border: 1px solid rgba(37, 99, 235, 0.2) !important;
+          box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1) !important;
+        }
+      }
+      
+      // Elegant Search Button (Ctrl+K) - Better spacing
+      #search-toggle {
+        background: none !important;
+        border: 1px solid rgba(37, 99, 235, 0.15) !important;
+        border-radius: 6px !important;
+        padding: 4px 10px !important;
+        font-size: 0.8rem !important;
+        color: var(--elite-dark-light) !important;
+        transition: all 0.2s ease !important;
+        margin: 0 !important;
+        height: 36px !important;
+        max-height: 36px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: nowrap !important;
+        line-height: 1 !important;
+        
+        .nav-link {
+          padding: 0 !important;
+          margin: 0 !important;
+          font-weight: 500 !important;
+          text-transform: none !important;
+          letter-spacing: 0.25px !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 4px !important;
+          line-height: 1 !important;
+          
+          i {
+            font-size: 0.95rem;
+            margin: 0;
+          }
+        }
+        
+        &:hover {
+          background: rgba(37, 99, 235, 0.05) !important;
+          border-color: rgba(37, 99, 235, 0.25) !important;
+          transform: translateY(-1px) !important;
+        }
+      }
+    }
+    
+    // Elegant Theme Toggle Container - Single clean icon
+    .toggle-container {
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      
+      button {
+        background: none !important;
+        border: 1px solid rgba(37, 99, 235, 0.15) !important;
+        border-radius: 6px !important;
+        padding: 4px 8px !important;
+        color: var(--elite-dark-light) !important;
+        transition: all 0.2s ease !important;
+        width: 36px !important;
+        height: 36px !important;
+        max-height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1 !important;
+        
+        i {
+          font-size: 1.1rem !important;
+        }
+        
+        &:hover {
+          background: rgba(37, 99, 235, 0.05) !important;
+          border-color: rgba(37, 99, 235, 0.25) !important;
+          transform: translateY(-1px) !important;
+        }
+      }
+    }
+  }
+}
+
+// Responsive: hide kbd hint on extra-small screens to avoid collisions
+@media (max-width: 576px) {
+  #search-toggle .kbd-hint {
+    display: none !important;
+  }
+}
+
+// Footer social icons — slightly larger for better visibility in both themes
+.social a {
+  font-size: 1.6rem !important;
+  line-height: 1 !important;
+}
+
+// ENHANCED BUTTON SYSTEM OVERRIDE - Softer Contrast
+.btn, button {
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  border: 1px solid !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  
+  // Softer, less aggressive styling
+  &:not(.btn-outline) {
+    background: rgba(37, 99, 235, 0.1) !important;
+    border-color: rgba(37, 99, 235, 0.2) !important;
+    color: #2563eb !important;
+    box-shadow: none !important;
+    
+    &:hover {
+      background: rgba(37, 99, 235, 0.15) !important;
+      border-color: rgba(37, 99, 235, 0.3) !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15) !important;
+    }
+  }
+  
+  // Special styling for primary actions (if needed)
+  &.btn-primary {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(14, 165, 233, 0.9)) !important;
+    border-color: transparent !important;
+    color: white !important;
+    
+    &:hover {
+      background: linear-gradient(135deg, #2563eb, #0ea5e9) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25) !important;
+    }
+  }
+}
+
+// ENHANCED HEADING SYSTEM OVERRIDE
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  
+  &.page-heading, &.post-title {
+    background: linear-gradient(135deg, var(--elite-primary) 0%, var(--elite-accent) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--elite-primary), var(--elite-accent));
+      border-radius: 2px;
+    }
+  }
+}
+
+// ENHANCED CARD SYSTEM OVERRIDE
+.card {
+  border: none !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: blur(10px) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  overflow: hidden !important;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--elite-primary), var(--elite-accent));
+  }
+  
+  &:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+// DARK MODE FIX - Text Visibility Issues
+html[data-theme="dark"] {
+  // Fix body text visibility
+  body {
+    color: var(--global-text-color) !important;
+    background: var(--global-bg-color) !important;
+  }
+  
+  // Fix heading colors in dark mode
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--global-text-color) !important;
+    
+    // Remove gradient text effects in dark mode
+    &.page-heading, &.post-title {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      background-clip: unset !important;
+      color: var(--global-theme-color) !important;
+    }
+  }
+  
+  // Fix link colors
+  a {
+    color: var(--global-theme-color) !important;
+    
+    &:hover {
+      color: var(--global-hover-color) !important;
+    }
+  }
+  
+  // Fix navigation in dark mode
+  .navbar {
+    background: rgba(31, 41, 55, 0.95) !important;
+    
+    .navbar-brand {
+      color: var(--global-text-color) !important;
+      
+      &:hover {
+        color: var(--global-theme-color) !important;
+      }
+    }
+    
+    .navbar-nav .nav-item .nav-link {
+      color: var(--global-text-color-light) !important;
+      
+      &:hover {
+        color: var(--global-theme-color) !important;
+        background: rgba(14, 165, 233, 0.1) !important;
+      }
+      
+      &.active {
+        color: var(--global-theme-color) !important;
+        background: rgba(14, 165, 233, 0.15) !important;
+        border: 1px solid rgba(14, 165, 233, 0.25) !important;
+      }
+    }
+  }
+  
+  // Fix buttons in dark mode - much softer contrast
+  .btn, button {
+    &:not(.btn-outline) {
+      background: rgba(14, 165, 233, 0.15) !important;
+      border-color: rgba(14, 165, 233, 0.25) !important;
+      color: #0ea5e9 !important;
+      
+      &:hover {
+        background: rgba(14, 165, 233, 0.2) !important;
+        border-color: rgba(14, 165, 233, 0.35) !important;
+        box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2) !important;
+      }
+    }
+    
+    &.btn-primary {
+      background: rgba(14, 165, 233, 0.8) !important;
+      color: white !important;
+      
+      &:hover {
+        background: rgba(14, 165, 233, 0.9) !important;
+      }
+    }
+  }
+  
+  // Fix card backgrounds
+  .card {
+    background: var(--global-card-bg-color) !important;
+    border-color: var(--global-divider-color) !important;
+    
+    .card-title {
+      color: var(--global-text-color) !important;
+    }
+    
+    .card-text {
+      color: var(--global-text-color-light) !important;
+    }
+  }
+  
+  // Fix paragraph and general text
+  p {
+    color: var(--global-text-color) !important;
+  }
+  
+  // Fix list items
+  li {
+    color: var(--global-text-color) !important;
+  }
+  
+  // Fix social icons in dark mode - with larger size
+  .social a {
+    color: var(--global-text-color-light) !important;
+    font-size: 1.6rem !important; // Maintain enlarged size in dark mode
+    
+    &:hover {
+      color: var(--global-theme-color) !important;
+    }
+  }
+  
+  // Fix navbar buttons in dark mode
+  .navbar {
+    #search-toggle {
+      border-color: rgba(255, 255, 255, 0.15) !important;
+      color: var(--global-text-color-light) !important;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+      }
+    }
+    
+    .toggle-container button {
+      border-color: rgba(255, 255, 255, 0.15) !important;
+      color: var(--global-text-color-light) !important;
+      
+      i {
+        color: var(--global-text-color-light) !important;
+      }
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+      }
+    }
+  }
+  
+  // Fix footer in dark mode
+  footer.fixed-bottom {
+    background: var(--global-bg-color) !important;
+    border-top-color: var(--global-divider-color) !important;
+  }
+  
+  // Override elite variables for dark mode compatibility
+  --elite-dark: var(--global-text-color);
+  --elite-dark-light: var(--global-text-color-light);
+  --elite-medium: var(--global-text-color-light);
+  --elite-primary: var(--global-theme-color);
+  --elite-primary-hover: var(--global-hover-color);
+  --elite-surface: var(--global-bg-color);
+  --elite-surface-hover: var(--global-card-bg-color);
+  --elite-border: var(--global-divider-color);
+}
+
+// FINAL OVERRIDE - Force compact navbar (most specific selector)
+header nav#navbar.navbar,
+header nav.navbar,
+nav#navbar.navbar {
+  padding: 0.25rem 0 !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  height: 50px !important;
+  
+  > .container {
+    height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+  }
+}

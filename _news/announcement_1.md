@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-11-1 10:00:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Received an **all-expenses-paid invitation** to attend IndoML 2025 from the IndoML Datathon committee, for submitting a quality entry to the IndoML Datathon 2025.
