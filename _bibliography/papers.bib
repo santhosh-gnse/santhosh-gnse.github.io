@@ -29,7 +29,6 @@
   author={G S, Santhosh and Prakash, Saurav and Ravindran, Balaraman},
   journal={arXiv preprint arXiv:2509.11155},
   year={2025},
-  note={Under review at KDD 2026},
   abstract={The quadratic complexity of the attention mechanism remains a fundamental barrier to scaling Large Language Models (LLMs) to longer contexts, creating a critical bottleneck in both computation and memory. To address this, we introduce AQUA (Attention via QUery mAgnitudes) a novel and versatile approximation strategy that significantly reduces the cost of attention with a graceful performance trade-off. Our method operates in two phases: an efficient offline step where we compute a universal, language agnostic projection matrix via SVD on a calibration dataset, and an online inference step where we project query and key vectors and dynamically select a sparse subset of dimensions based on the query's magnitude. We demonstrate that a 25% reduction in the attention dot-product computation can be achieved with statistically insignificant impact on performance across a wide range of benchmarks.},
   pdf={https://arxiv.org/abs/2509.11155},
   selected={true}
@@ -41,10 +40,10 @@
   bibtex_show={true},
   title={SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression},
   author={G S, Santhosh and Prakash, Saurav and Ravindran, Balaraman},
-  journal={OpenReview},
+  journal={arXiv preprint arXiv:2511.18936},
   year={2025},
-  note={Under review at ICLR 2026},
   abstract={Large Language Models (LLMs) face a significant bottleneck during autoregressive inference due to the massive memory footprint of the Key-Value (KV) cache. Existing compression techniques like token eviction, quantization, or other low-rank methods often risk information loss, have fixed limits, or introduce significant computational overhead from explicit decompression steps. In this work, we introduce SWAN, a novel, fine-tuning-free framework that eliminates this overhead. Our method uses an offline orthogonal matrix to rotate and prune the KV-cache, which is then used directly in the attention computation without any reconstruction. Our extensive experiments demonstrate that SWAN, augmented with a small dense buffer, offers a robust trade-off, maintaining performance close to the uncompressed baseline even at aggressive 50-60% memory savings per-token on KV-cache.},
+  pdf={https://arxiv.org/abs/2511.18936},
   selected={true}
 }
 
