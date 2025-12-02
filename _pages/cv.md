@@ -4,5 +4,5 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-redirect_to: https://drive.google.com/file/d/1eYP9MOzK_R6nceEW9d93P4OpbKTAy6mr/view?usp=sharing
+redirect_to: https://drive.google.com/file/d/14KslP8xRsPQo_NIBc7Vt17S002Wp8qA5/view?usp=sharing
 ---
