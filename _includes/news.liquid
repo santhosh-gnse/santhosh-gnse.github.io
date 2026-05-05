@@ -14,9 +14,16 @@
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}
+        {% assign thirty_days_ago = site.time | date: '%s' | plus: 0 | minus: 2592000 %}
         {% for item in news limit: news_limit %}
+          {% assign item_time = item.date | date: '%s' | plus: 0 %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" style="width: 20%">
+              {{ item.date | date: '%b %d, %Y' }}
+              {% if item_time > thirty_days_ago %}
+                <span class="news-new-badge" aria-label="new">NEW</span>
+              {% endif %}
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}

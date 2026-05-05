@@ -2,16 +2,16 @@
 layout: about
 title: About
 permalink: /
-subtitle: Post-Baccalaureate Fellow at <a href='https://rbcdsai.iitm.ac.in/'>RBCDSAI, IIT Madras</a>
+subtitle: M.Sc. Student in Artificial Intelligence and Machine Learning at <a href='https://www.tu-darmstadt.de/'>TU Darmstadt</a>
 
 profile:
   align: right
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Centre for Responsible AI</p>
-    <p>IIT Madras, Chennai, India</p>
-    <p>santhoshgs013[@]gmail[.]com</p>
+    <p>M.Sc. AI &amp; ML</p>
+    <p>TU Darmstadt, Germany</p>
+    <p><button type="button" class="reveal-email-btn" data-reveal-email data-user="c2FudGhvc2hnczAxMw==" data-domain="Z21haWwuY29t">Email</button></p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,9 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Santhosh, a Post-Baccalaureate Fellow at [Robert Bosch Centre for Data Science and Artificial Intelligence (RBCDSAI)](https://rbcdsai.iitm.ac.in/) under [Prof. Balaraman Ravindran](https://dsai.iitm.ac.in/~ravi/) and [Prof. Saurav Prakash](https://www.ee.iitm.ac.in/faculty/profile/saurav). My research interests lie in Reinforcement Learning, Language Models, and Generative AI, with a particular focus on advancing the development of AI systems and agents capable of generalist behavior and continual learning.
+I am Santhosh, an M.Sc. student in Artificial Intelligence and Machine Learning at the [Technical University of Darmstadt](https://www.tu-darmstadt.de/). I am interested in reinforcement learning and representation learning, with a focus on developing reliable and adaptive autonomous systems that operate effectively in real-world environments.
 
-At RBCDSAI, I am working on evaluation and explanations for RL trained policies or agents. I have worked on efficient inference techniques for language models and also developed framework and dataset for the evaluation of LLMs in Indian Domain.
+Previously, I was a Post-Baccalaureate Fellow at the [Robert Bosch Centre for Data Science and Artificial Intelligence (RBCDSAI)](https://rbcdsai.iitm.ac.in/), IIT Madras, advised by [Prof. Balaraman Ravindran](https://dsai.iitm.ac.in/~ravi/) and [Prof. Saurav Prakash](https://www.ee.iitm.ac.in/faculty/profile/saurav). There, I worked on evaluation and explanations for RL-trained policies and agents, efficient inference techniques for language models, and built a framework and dataset for evaluating LLMs in the Indian context.
 
-I am currently pursuing the final year of my B.S. in Data Science and Applications from [IIT Madras](https://study.iitm.ac.in/ds/), Chennai, as an off-campus degree. I have also completed my B.E. in Electrical and Electronics Engineering from [Sri Sivasubramaniya Nadar College of Engineering (SSNCE)](https://www.ssn.edu.in/)
-, Chennai, India.
+I completed my B.S. in Data Science and Applications from [IIT Madras](https://study.iitm.ac.in/ds/) (off-campus degree) and my B.E. in Electrical and Electronics Engineering from [Sri Sivasubramaniya Nadar College of Engineering (SSNCE)](https://www.ssn.edu.in/), Chennai, India.
