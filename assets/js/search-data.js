@@ -45,6 +45,9 @@ ninja.data = [{
           section: "News",},{id: "news-received-an-all-expenses-paid-invitation-to-attend-indoml-2025-from-the-indoml-datathon-committee-for-submitting-a-quality-entry-to-the-indoml-datathon-2025",
           title: 'Received an all-expenses-paid invitation to attend IndoML 2025 from the IndoML Datathon committee,...',
           description: "",
+          section: "News",},{id: "news-indicasa-received-the-3mt-runner-up-award-and-best-poster-award-at-the-emerging-global-south-ai-egsai-workshop-aaai-2026",
+          title: 'IndiCASA received the 3MT Runner-Up Award and Best Poster Award at the Emerging...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
